@@ -55,7 +55,13 @@ initial begin
     b0=1;  b1=2;  b2=3;  b3=4;
 
     #10;   // Wait 1 clock cycle
-
+if (c0 !== a0+b0 ||
+    c1 !== a1+b1 ||
+    c2 !== a2+b2 ||
+    c3 !== a3+b3)
+    $display("SIMD ERROR at time %t", $time);
+else
+    $display("SIMD PASS at time %t", $time);
     //////////////////////////////////////////////////
     // Test Case 2
     //////////////////////////////////////////////////
@@ -63,6 +69,7 @@ initial begin
     b0=10;  b1=20;  b2=30;  b3=40;
 
     #10;
+// Check results AFTER clock edge
 
     //////////////////////////////////////////////////
     // Test Case 3 (Random)
