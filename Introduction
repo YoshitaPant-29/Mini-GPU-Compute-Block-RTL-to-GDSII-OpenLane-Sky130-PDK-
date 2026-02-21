@@ -1,0 +1,7 @@
+Designed a small 4-lane SIMD vector add unit in Verilog, inspired by GPU compute shaders for parallel processing of 4 data elements in a single cycle.
+
+Executed a complete RTL-to-GDSII physical design flow using OpenLane (Sky130): synthesis, floorplanning, placement, clock tree synthesis (CTS), routing, and signoff checks.
+
+Analyzed STA timing reports and adjusted clock period and utilization to achieve positive setup slack and a DRC-clean layout, building intuition for timing closure and congestion.
+
+Documented results (floorplan snapshots, timing and area reports) in a GitHub repo to demonstrate readiness for industry PD tools like Innovus/ICC2 and Primetime.
